@@ -2,13 +2,13 @@ const http = require('http');
 const fs = require('fs');
 
 
-const index = fs.readFileSync('./public/index.html');
 const DOKA = fs.readFileSync('./public/DOKA.jpeg');
 const skrr = fs.readFileSync('./public/skrr.mp4');
 const length = skrr.length;
 
 function serveIndex(req, res) {
   res.writeHead(200, { 'Content-Type': 'text/html' });
+  const index = fs.readFileSync('./public/index.html');
   res.end(index);
 }
 
