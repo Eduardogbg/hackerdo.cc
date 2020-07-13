@@ -10,14 +10,15 @@
     html, body { margin: 0; height: 100%; }
 
     video {
-      width: 100%;
       height: 100%;
+      width: 100%;
+      background-color: black;
     }
   </style>
 </head>
 
 <body>
-  <video autoplay controls>
+  <video autoplay controls ontouchstart="this.paused ? this.play() : this.pause();">
     <source src="https://hackerdo.cc/skrr.mp4" type="video/mp4">
   </video>
 </body>

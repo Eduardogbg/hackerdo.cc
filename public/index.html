@@ -6,8 +6,6 @@
   <meta name="author" content="Eduardo Gomes">
   <meta name="description" content="1337">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="twitter:card" content="player">
   <meta name="twitter:site" content="@hackerdocc">
   <meta name="twitter:creator" content="@hackerdocc">
@@ -26,19 +24,20 @@
     body {
       display: flex;
       justify-content: center;
-
       background-image: url('DOKA.jpeg');
     }
 
     video {
       height: 100%;
       width: auto;
+      background-color: black;
     }
+
   </style>
 </head>
 
 <body>
-  <video autoplay controls>
+  <video autoplay controls ontouchstart="this.paused ? this.play() : this.pause();">
     <source src="skrr.mp4" type="video/mp4">
   </video>
 </body>
